@@ -1,0 +1,250 @@
+body {
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #000000;
+    animation: fadeInDown 1s ease;
+}
+
+.card, .btn {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #000000;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #ffc107;
+}
+
+#frases .card {
+    transition: all 0.4s ease;
+    background-color: #1a1a1a;
+    border: none;
+}
+
+#frases .card:hover {
+    box-shadow: 0 0 15px #ffc107;
+    transform: translateY(-5px);
+}
+
+#carouselCuriosidades {
+    max-width: 700px;
+    margin: auto;
+}
+
+#carouselCuriosidades .carousel-item {
+    animation: fadeIn 1.2s ease;
+    color: #ffc107;
+}
+
+#curiosidades {
+    background-color: #121212;
+}
+
+#universo .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+}
+
+#universo .card-img-top {
+    height: 700px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#universo .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0.95;
+}
+
+#universo .card-title {
+    font-size: 1.4rem;
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+}
+
+#universo .card-text {
+    color: #f1f1f1;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#universo .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffc107;
+    z-index: 2;
+}
+
+footer {
+    background-color: #000000;
+    color: #f1f1f1;
+}
+
+
+.bg-light, .bg-white {
+    background-color: #121212 !important;
+    color: #f1f1f1 !important;
+}
+
+.bg-dark, .bg-secondary {
+    background-color: #000000 !important;
+    color: #f1f1f1 !important;
+}
+
+/* TEXTOS */
+.text-muted {
+    color: #ffc107 !important;
+}
+
+.text-dark {
+    color: #f1f1f1 !important;
+}
+
+.text-primary, .text-secondary {
+    color: #ffc107 !important;
+}
+
+.btn-primary, .btn-secondary, .btn-dark {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-dark:hover {
+    background-color: #e0a800 !important;
+    border-color: #d39e00 !important;
+    color: #000 !important;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #ffc107;
+}
+
+
+.border, .border-light, .border-secondary {
+    border-color: #ffc107 !important;
+}
+
+.shadow, .shadow-sm, .shadow-lg {
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.4) !important;
+}
+#secundarios .card-img-top {
+    height: 600px;
+    object-fit: cover;
+}
+
+#momentosCarousel .card-img-top {
+    height: 400px; /* Podés ajustar según lo que te guste */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* 🌟 1. Animación de entrada para secciones */
+section {
+    animation: fadeIn 1.2s ease;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 🔝 2. Botón flotante “Volver arriba” */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 1000;
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #backToTop:hover {
+    background-color: #ffdb4d;
+  }
+  
+  /* 🔽 Animación de entrada desde abajo (solo una vez) */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hero-section {
+    position: relative;
+    background: url('la.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden; /* Para que el humo no se desborde */
+  }
+  
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.ibb.co/ZYW3VTp/humo-claro.png') repeat;
+    background-size: cover;
+    opacity: 0.2; /* Podés ajustar esto para más o menos humo */
+    pointer-events: none; /* Para que no interfiera con clicks */
+    animation: moveSmoke 30s linear infinite;
+    z-index: 1;
+  }
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 2; /* Para que el texto esté arriba del humo */
+  }
+  
+  @keyframes moveSmoke {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 100%;
+    }
+  }
+  
